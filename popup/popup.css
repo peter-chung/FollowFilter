@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 300px;
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  background: #18181b;
+  color: #efeff1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #2e2e35;
+}
+
+h1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #efeff1;
+}
+
+.logo-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Toggle */
+.toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9147ff;
+}
+
+.toggle-label.off {
+  color: #5a5a72;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #3a3a43;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 3px;
+  top: 3px;
+  background: #efeff1;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.toggle input:checked + .slider {
+  background: #9147ff;
+}
+
+.toggle input:checked + .slider::before {
+  transform: translateX(16px);
+}
+
+/* Body section */
+.section {
+  padding: 14px 16px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #adadb8;
+  margin-bottom: 10px;
+}
+
+/* Chips */
+#chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+  min-height: 20px;
+}
+
+/* Empty state */
+.empty {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 4px;
+}
+
+.empty p:first-child {
+  font-size: 13px;
+  color: #adadb8;
+  margin-bottom: 4px;
+}
+
+.empty p:last-child {
+  font-size: 11px;
+  color: #5a5a72;
+}
+
+/* Chips */
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #2e2e35;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.chip span {
+  color: #efeff1;
+}
+
+.remove-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #adadb8;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.remove-btn svg {
+  width: 11px;
+  height: 11px;
+}
+
+.remove-btn:hover {
+  color: #9147ff;
+}
+
+/* Add row */
+.add-row {
+  display: flex;
+  gap: 8px;
+}
+
+#category-input {
+  flex: 1;
+  background: #2e2e35;
+  border: 1px solid #3a3a43;
+  border-radius: 4px;
+  color: #efeff1;
+  font-size: 13px;
+  padding: 6px 10px;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+#category-input::placeholder {
+  color: #5a5a72;
+}
+
+#category-input:focus {
+  border-color: #9147ff;
+}
+
+@keyframes flash-red {
+  0%   { border-color: #3a3a43; background: #2e2e35; }
+  30%  { border-color: #e91916; background: rgba(233, 25, 22, 0.1); }
+  100% { border-color: #3a3a43; background: #2e2e35; }
+}
+
+#category-input.duplicate {
+  animation: flash-red 0.5s ease forwards;
+}
+
+#add-btn {
+  background: #9147ff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  transition: background 0.15s;
+}
+
+#add-btn:hover {
+  background: #7d2de0;
+}

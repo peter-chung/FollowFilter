@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "FollowFilter",
+  "version": "1.0.0",
+  "description": "Hide followed streamers by category on your Twitch following page.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "FollowFilter",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.twitch.tv/*"],
+      "js": ["content/content.js"]
+    }
+  ]
+}
