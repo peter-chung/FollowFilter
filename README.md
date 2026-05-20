@@ -13,9 +13,11 @@ A simple and lightweight Chrome extension that lets you hide Twitch streamers yo
 
 ## Installation
 
-1. Clone or download this repo
-2. Go to `chrome://extensions/` and enable **Developer mode**
-3. Click **Load unpacked** and select the project folder
+1. Click the green **Code** button on this page and select **Download ZIP**
+2. Unzip the downloaded file
+3. Open the unzipped folder -- GitHub adds an extra outer folder (e.g. `FollowFilter-main`), so open that and locate the inner folder containing `manifest.json`
+4. Go to `chrome://extensions/` in Chrome and enable **Developer mode** (top right toggle)
+5. Click **Load unpacked** and select the inner folder containing `manifest.json`
 
 ## Usage
 
