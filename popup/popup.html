@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FollowFilter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="logo-heading">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9147ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.531 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14v6a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341l.427-.473"/><path d="m16.5 3.5 5 5"/><path d="m21.5 3.5-5 5"/></svg>
+        FollowFilter
+      </h1>
+      <div class="toggle-group">
+        <span id="toggle-label" class="toggle-label">On</span>
+        <label class="toggle">
+          <input type="checkbox" id="enabled-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-label">Blocked Categories</p>
+      <div id="chip-list"></div>
+      <div class="add-row">
+        <input type="text" id="category-input" placeholder="e.g. Slots" />
+        <button id="add-btn">Add</button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
